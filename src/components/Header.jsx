@@ -55,7 +55,7 @@ export const Header = () => {
      {/* Dekpot and tablet */}
      <div className='hidden md:flex w-full h-full items-center justify-between'>
       <div className='flex '> 
-        <Link to={"/"} className='flex items-center gap-2'>
+        <Link to={"/city"} className='flex items-center gap-2'>
           <img alt='logo' src={logo} className= "w-8 object-cover"></img>
 	        <p className='text-headingColor text-xl font-bold '>City</p>
         </Link>
@@ -66,7 +66,7 @@ export const Header = () => {
         // animate={{opacity:1, x: 0, }} 
         // exit={{opacity:0, x: 200, }}  
         className='flex items-center  gap-6'>
-        <Link to={"/"}>
+        <Link to={"/city"}>
         <li className="text-base  text-textColor hover:text-headingColor  
           duration-100 transition-all ease-in-out  cursor-pointer" onClick={() => setIsMenu(false)} >Home</li>
         </Link>
