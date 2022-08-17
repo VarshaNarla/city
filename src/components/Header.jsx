@@ -109,7 +109,7 @@ export const Header = () => {
      {/* Mobile*/}
      <div className='flex md:hidden w-full h-full items-center justify-between'>
       <div className='flex '> 
-        <Link to={"/"} className='flex items-center gap-2'>
+        <Link to={"/city"} className='flex items-center gap-2'>
           <img alt='logo' src={logo} className= "w-8 object-cover"></img>
         </Link>
         <div className='flex items-center'>
@@ -141,7 +141,7 @@ export const Header = () => {
                     </Link>
                   }
                   <ul className='items-center flex-col  gap-6'>
-                  <Link to={"/"}>
+                  <Link to={"/city"}>
                     <li className="text-base  text-textColor hover:bg-slate-200 
                       duration-100 transition-all ease-in-out py-1  cursor-pointer"  >Home</li>
                   </Link>
@@ -150,7 +150,7 @@ export const Header = () => {
                       duration-100 transition-all ease-in-out py-1 cursor-pointer" >Menu</li>
                   </Link>
                   </ul>
-                  <p className=' py-1 flex items-center justify-center rounded-md shadow-md
+                  <p className=' py-1 mt-2 mb-2 flex items-center justify-center rounded-md shadow-md
                   gap-3 bg-gray-200 hover:bg-gray-300 transition-all duration-100 ease-in-out
                   text-textColor text-base cursor-pointer' onClick={logout} >Logout <MdLogout/></p>
                 </motion.div>
