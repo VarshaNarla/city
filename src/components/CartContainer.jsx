@@ -8,6 +8,7 @@ import { useState,useEffect } from 'react'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import  { app } from '../firebase.config'
 import CartItem from './CartItem'
+import {BiRupee} from 'react-icons/bi'
  
 const CartContainer = () => {
     const firebaseAuth = getAuth(app);
@@ -77,16 +78,25 @@ const CartContainer = () => {
                 <div className='w-full flex flex-col bg-cartTotal rounded-[2rem] items-center gap-2 justify-evenly px-8 py-2 '>
                     <div className='w-full m-2 flex justify-between items-center'>
                         <p className='text-gray-400 text-lg'>Sub Total</p>
-                        <p className='text-gray-400 text-lg'>${total}</p>
+                        <div className='flex flex-row  items-center'>
+                            <BiRupee className='text-red-600'></BiRupee>
+                            <p className='text-gray-400 text-lg'>{total}</p>
+                        </div>
                     </div>
                     <div className='w-full m-2  flex justify-between items-center'>
                         <p className='text-gray-400 text-lg'>Delivery cost</p>
-                        <p className='text-gray-400 text-lg'>$2.8</p>
+                        <div className='flex flex-row  items-center'>
+                            <BiRupee className='text-red-600'></BiRupee>
+                            <p className='text-gray-400 text-lg'>30</p>
+                        </div>
                     </div>
                     <div className='w-full m-2  bg-gray-400 border'></div>
                     <div className='w-full flex justify-between items-center'>
                         <p className='text-gray-300 text-lg font-semibold'>Total</p>
-                        <p className='text-gray-300 text-lg'>${total + 2.8}</p>
+                        <div className='flex flex-row  items-center'>
+                            <BiRupee className='text-red-600'></BiRupee>
+                            <p className='text-gray-300 text-lg'>{total + 30}</p>
+                        </div>
                     </div>
                     {user ? (
                         <motion.button whileTap={{scale:0.95}} className='w-full p-2 bg-orange-500 rounded-3xl text-gray-100 '>Check out</motion.button>

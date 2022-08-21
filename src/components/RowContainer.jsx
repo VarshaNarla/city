@@ -5,6 +5,7 @@ import NotFound from '../img/NotFound.svg'
 import { useStateValue } from '../context/stateProvider'
 import { cartItems } from '../context/initialState'
 import { actionType } from '../context/reducer'
+import {BiRupee} from 'react-icons/bi'
  
 const RowContainer = ({flag,data, scrollValue}) => {
     const rowContainer = useRef()
@@ -36,9 +37,12 @@ const RowContainer = ({flag,data, scrollValue}) => {
                             <MdShoppingBasket className='text-white cursor-pointer hover:shadow-md'/>
                         </motion.div>
                         <div className='flex flex-col'>
-                        <p className='font-semibold text-textColor md:text-base text-sm text-right'>{item?.title}</p>
-                        <p className='font-semibold text-gray-500 md:text-xs text-xs text-right'>{item?.calories} Calories</p>
-                        <p className='font-semibold text-gray-500  md:text-xs text-xs text-right'><span className='font-semibold text-red-600 md:text-xs text-xs'>$</span>{item?.price}</p>
+                            <p className='font-semibold text-textColor md:text-base text-sm text-right'>{item?.title}</p>
+                            <p className='font-semibold text-gray-500 md:text-xs text-xs text-right'>{item?.calories} Calories</p>
+                            <div className='flex flex-row  items-center justify-end'>
+                                <BiRupee className='text-red-600'></BiRupee>
+                                <p className='font-semibold text-gray-500  md:text-xs text-xs text-right'>{item?.price}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

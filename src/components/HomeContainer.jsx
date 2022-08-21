@@ -2,6 +2,7 @@ import React from 'react';
 import Delivery from '../img/delivery.png'
 import HeroBg from "../img/heroBg.png"
 import { data } from '../utils/data';
+import {BiRupee} from 'react-icons/bi'
 
 const HomeContainer = () => {
   return (
@@ -16,7 +17,7 @@ const HomeContainer = () => {
           </div>
         </div>
         <p className='text-[2.5em] font-bold text-headingColor tracking-wide lg:text-[3.5rem]'>
-          The Fastest Delivary in
+          The Fastest Delivery in
           <span className='text-orange-600 lg:text-[5rem]'> Your City</span>
         </p>
         <p className='text-base text-center text-textColor md:text-left'>
@@ -35,7 +36,10 @@ const HomeContainer = () => {
                   <img src={n.imgsrc} alt="i1" className='lg:w-40 lg:-mt-20 w-20 -mt-10'></img>
                   <p className='text-base lg:text-lg mt-4  font-semibold text-textColor'>{n.name}</p>
                   <p className='text-sm text-gray-500 font-semibold my-2'>{n.description}</p>
-                  <p className='text-sm font-semibold text-headingColor'><span className='text-xs text-red-600'>$</span>{n.price}</p>
+                  <div className='flex flex-row  items-center'>
+                    <BiRupee className='text-red-600'></BiRupee>
+                    <p className='text-sm font-semibold text-headingColor'>{n.price}</p>
+                  </div>
                 </div>
               )
               )}

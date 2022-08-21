@@ -1,6 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import {BiMinus, BiPlus} from 'react-icons/bi'
+import {BiMinus, BiPlus ,BiRupee} from 'react-icons/bi'
 import { useState,useEffect } from 'react'
 import { useStateValue } from '../context/stateProvider'
 import {actionType} from '../context/reducer'
@@ -59,7 +59,10 @@ const CartItem = ({item,flag,setFlag}) => {
         </img>
         <div className='flex flex-col'>
             <p className='text-base text-gray-50 font-semibold '>{item?.title}</p>
-            <p className='text-sm text-gray-300 font-semibold'><span className='text-sm text-red-600 font-semibold'>$ </span>{parseFloat(item?.price) * qty}</p>
+            <div className='flex flex-row  items-center'>
+                <BiRupee className='text-red-600'></BiRupee>
+                <p className='text-sm text-gray-300 font-semibold'>{parseFloat(item?.price) * qty}</p>
+            </div>
         </div>
         {/* button section */}
         <div className='group flex items-center gap-2 ml-auto cursor-pointer'>
